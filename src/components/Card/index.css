@@ -1,0 +1,31 @@
+.year-card {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 1px 2px #0004;
+    width: 120px;
+    height: 60px;
+    margin: .5em;
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #0001;
+}
+
+span.title {
+}
+
+.subtitle {
+    font-size: .5em;
+    color: gray;
+    font-style: italic;
+}
