@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# Like years
+Let's say we have a year when the 1st of January is on a Monday. The next year will start on a Tuesday, unless the year is a leap year. With this setup the calendar wich starts on a monday will come back eventually.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This sequence repeats itself, and I was curious what this sequence would be and how often patterns would repeat itself.
 
-## Available Scripts
+## Goal
+I want to know the continuing sequence of years without breaking the pattern and how long this sequence is.
 
-In the project directory, you can run:
+## Types of calendar
+There are only fourteen types of calendars. When the year starts on every day of the week, and the leap yer variations of it.
 
-### `npm start`
+I gave each type of calendar its own code to see repeating patterns more easily.
+Each code corresponds to which day the first of Januari falls.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+|  Code | Year starts on a | Is a leap year |
+|-----|---|---|
+| 1 | <span style="color:#ff2d2d;">Monday</span>
+| 2 | <span style="color:#54c3ff;">Tuesday</span>
+| 3 | <span style="color:#ff852b;">Wednesday</span>
+| 4 | <span style="color:#5c9a36;">Thursday</span>
+| 5 | <span style="color:#ffb600;">Friday</span>
+| 6 | <span style="color:#a95fb6;">Saturday</span>
+| 7 | <span style="color:#909090;">Sunday</span>
+| 8 | <span style="color:#ff2d2d;">Monday</span> | Yes
+| 9 | <span style="color:#54c3ff;">Tuesday</span> | Yes
+| a | <span style="color:#ff852b;">Wednesday</span> | Yes
+| b | <span style="color:#5c9a36;">Thursday</span> | Yes
+| c | <span style="color:#ffb600;">Friday</span> | Yes
+| d | <span style="color:#a95fb6;">Saturday</span> | Yes
+| e | <span style="color:#909090;">Sunday</span> | Yes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I will reference every calendar according to their code
+### Leap years
+The sequence would've been 7 if not for leap years. Because a leap year is every 4 years, hence the year will start on another day than the previous leap year. 
 
-### `npm test`
+> #### When is a leap year?
+>To be a leap year, the year number must be divisible by four – except for end-of-century years, which must be divisible by 400. This means that the year 2000 was a leap year, although 1900 was not.
+2020, 2024 and 2028 are all leap years.  
+>[Source: Royal Museums Greenwich](https://www.rmg.co.uk/stories/topics/which-years-are-leap-years-can-you-have-leap-seconds)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Conclusion
+Every 28 years a sequence can repeat itself. 
+Every leap year calendar (`8-e`) will have had the chance 
+to appear in the sequence. Except that every 100 years the leap year skips a year.
 
-### `npm run build`
+This will give the sequence of 28 years the chance to appear at least 3 times before it breaks the sequence.
+Let's call these 3 repeating order of years a `full-block`.
+After these full-blocks something interesting happens, it will try to repeat the sequence but finds itself an end-of-century year and will mess up the sequence.
+Only 12 years is needed to correct itself and start the three full-blocks again.
+These 12 years, we'll call a `half-block`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The full blocks will always be the same pattern. 
+The half blocks will start the same. Somewhere in the middle it encounters an end-of-century year and will fall back on the full-block sequence again. It will do this always in 12 years.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The full sequence is 400 years long. In these 400 years the following pattern of blocks will always occur.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Number of blocks | Years in block
+|---|----|
+| 3 | 28 (full-block) |
+| 1 | 12 (half-block)|
+| 3 | 28 |
+| 1 | 12 |
+| 7 | 28 |
+| 1 | 12 |
 
-### `npm run eject`
+##### *Hindsight*
+*Considering the largest exception in the leap year rule is 400. The answer had to be 400 years.*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Our place in the sequence
+The sequence we are currently in starts in 1709 and ends in 2108.
+According to [Royal Museums Greenwich](https://www.rmg.co.uk/stories/topics/which-years-are-leap-years-can-you-have-leap-seconds) we only adapted the current calendar in the year 1752. Which means that we are in the first sequence to ever occur, and we didn't even start it from the beginning. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The data provider before the year 1752 is calculated using the calendars current method and not how the dates actually used to be.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## The data
+The data is provided in the sequence.md file. 
 
-## Learn More
+For a more visual representation of the current sequence I encourage you to build the project and scroll through the data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](/screenshot.png)
