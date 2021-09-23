@@ -12,22 +12,22 @@ There are only fourteen types of calendars. When the year starts on every day of
 I gave each type of calendar its own code to see repeating patterns more easily.
 Each code corresponds to which day the first of Januari falls.
 
-|  Code | Year starts on a | Is a leap year |
-|-----|---|---|
-| 1 | <span style="color:#ff2d2d;">Monday</span>
-| 2 | <span style="color:#54c3ff;">Tuesday</span>
-| 3 | <span style="color:#ff852b;">Wednesday</span>
-| 4 | <span style="color:#5c9a36;">Thursday</span>
-| 5 | <span style="color:#ffb600;">Friday</span>
-| 6 | <span style="color:#a95fb6;">Saturday</span>
-| 7 | <span style="color:#909090;">Sunday</span>
-| 8 | <span style="color:#ff2d2d;">Monday</span> | Yes
-| 9 | <span style="color:#54c3ff;">Tuesday</span> | Yes
-| a | <span style="color:#ff852b;">Wednesday</span> | Yes
-| b | <span style="color:#5c9a36;">Thursday</span> | Yes
-| c | <span style="color:#ffb600;">Friday</span> | Yes
-| d | <span style="color:#a95fb6;">Saturday</span> | Yes
-| e | <span style="color:#909090;">Sunday</span> | Yes
+|  Code | Year starts on a | Is a leap year | color
+|-----|---|---|---
+| 1 | <span style="color:#ff2d2d;">Monday</span> | |Red
+| 2 | <span style="color:#54c3ff;">Tuesday</span> | |Blue
+| 3 | <span style="color:#ff852b;">Wednesday</span> | |Orange
+| 4 | <span style="color:#5c9a36;">Thursday</span> | |Green
+| 5 | <span style="color:#ffb600;">Friday</span> | |Yellow
+| 6 | <span style="color:#a95fb6;">Saturday</span> | |Purple
+| 7 | <span style="color:#909090;">Sunday</span> | |Gray
+| 8 | <span style="color:#ff2d2d;">Monday</span> | Yes|Red
+| 9 | <span style="color:#54c3ff;">Tuesday</span> | Yes|Blue
+| a | <span style="color:#ff852b;">Wednesday</span> | Yes|Orange
+| b | <span style="color:#5c9a36;">Thursday</span> | Yes|Green
+| c | <span style="color:#ffb600;">Friday</span> | Yes|Yellow
+| d | <span style="color:#a95fb6;">Saturday</span> | Yes|Purple
+| e | <span style="color:#909090;">Sunday</span> | Yes|Gray
 
 I will reference every calendar according to their code
 ### Leap years
